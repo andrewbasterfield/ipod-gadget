@@ -69,9 +69,9 @@ static inline struct ipod_audio *func_to_ipod_audio(struct usb_function *f)
 
 static struct snd_pcm_hardware ipod_audio_hw = {
 	.info = SNDRV_PCM_INFO_INTERLEAVED | SNDRV_PCM_INFO_BLOCK_TRANSFER | SNDRV_PCM_INFO_MMAP | SNDRV_PCM_INFO_MMAP_VALID | SNDRV_PCM_INFO_PAUSE | SNDRV_PCM_INFO_RESUME,
-	.rates = SNDRV_PCM_RATE_44100,
+	.rates = SNDRV_PCM_RATE_44100 | SNDRV_PCM_RATE_48000,
 	.rate_min = 44100,
-	.rate_max = 44100,
+	.rate_max = 48000,
 	.buffer_bytes_max = BUFFER_BYTES_MAX,
 	//.period_bytes_max = PRD_SIZE_MAX,
 	//.period_bytes_min = MAX_USB_AUDIO_PACKET_SIZE,
